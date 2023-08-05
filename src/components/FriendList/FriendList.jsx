@@ -1,13 +1,15 @@
+import { Avatar, IsOnline, List, ListFriend, Name } from './FriendsList.styled';
+
 export const FriendList = ({ friends }) => {
   return (
-    <ul>
+    <List>
       {friends.map(friend => (
-        <li key={friend.id}>
-          <span>{friend.isOnline}</span>
-          <img src={friend.avatar} alt="User avatar" width="48" />
-          <p>{friend.name}</p>
-        </li>
+        <ListFriend key={friend.id}>
+          <IsOnline $online={friend.isOnline}></IsOnline>
+          <Avatar src={friend.avatar} alt="User avatar" width="56" />
+          <Name>{friend.name}</Name>
+        </ListFriend>
       ))}
-    </ul>
+    </List>
   );
 };

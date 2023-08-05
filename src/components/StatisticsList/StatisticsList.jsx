@@ -1,8 +1,10 @@
+import { Label, Percent } from './StatisticsList.styled';
+
 export const StatisticsList = ({ statEl: { label, percentage } }) => {
   return (
     <>
-      <span>{label}</span>
-      <span>{percentage}%</span>
+      <Label>{label}</Label>
+      <Percent>{percentage}%</Percent>
     </>
   );
 };

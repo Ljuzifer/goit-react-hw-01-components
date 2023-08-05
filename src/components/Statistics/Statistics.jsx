@@ -1,16 +1,17 @@
 import { StatisticsList } from 'components/StatisticsList/StatisticsList';
+import { List, Statistic, StatItem, Title } from './Statistics.styled';
 
 export const Statistics = ({ title, statData }) => {
   return (
-    <section>
-      {title && <h2>{title}</h2>}
-      <ul>
+    <Statistic>
+      {title && <Title>{title}</Title>}
+      <List>
         {statData.map(statEl => (
-          <li key={statEl.id}>
+          <StatItem key={statEl.id}>
             <StatisticsList statEl={statEl} />
-          </li>
+          </StatItem>
         ))}
-      </ul>
-    </section>
+      </List>
+    </Statistic>
   );
 };
