@@ -25,7 +25,7 @@ export const IsOnline = styled.span`
   height: 18px;
   margin-right: 44px;
   border-radius: 50%;
-  background-color: ${props => (props.$online ? 'green' : 'red')};
+  background-color: ${props => (props.children ? 'green' : 'red')};
 `;
 
 export const Avatar = styled.img`
